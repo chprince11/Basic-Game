@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./icon.jpg">
+
+    <title>Assignment 1 - Prince Chauhan</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+        body::before 
+        {
+            content: '';
+            background-image: url('./pic2.jpg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            opacity: 0.88;
+        }
+
+        input 
+        {
+            cursor: pointer;
+            padding: 10px;
+            padding-right: 36px;
+            padding-left: 19px;
+            border-radius: 12px;
+            border: none;
+            color: #fff;
+            background-color: #3e494c;
+            box-shadow: inset -8px -1px 0px 0px rgb(5 255 39);
+        }
+
+        input:hover 
+        {
+            cursor: pointer;
+            color: rgb(5 255 39);
+            box-shadow: inset -8px -1px 0px 0px rgb(255, 255, 255);
+        }
+
+        header 
+        {
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+
+        let playAgain = true;
+        let correctCount = 0;
+        let incorrectCount = 0;
+
+        while (playAgain === true) 
+        {
+            let sign = prompt("Press (+) for ADDITION ," + " Press (-) for SUBTRACTION and " + "Press (*) for MULTIPLICATION");
+
+            if (sign === null) 
+            {
+                alert("You pressed CANCEL, abborting...");
+                break;
+            }
+
+            if (sign !== '+' && sign !== '-' && sign !== '*') 
+            {
+                alert("Invalid input, please put a correct value:");
+                continue;
+            }
+
+            let num1 = Math.floor(Math.random() * 11);
+            let num2 = Math.floor(Math.random() * 12);
+
+            let answer = prompt("What is " + num1 + " " + sign + " " + num2 + " = ?");
+            answer = parseInt(answer);
+
+            let correctAnswer = 0;
+
+            switch (sign) 
+            {
+                case '+':
+                    correctAnswer = num1 + num2;
+                    break;
+                case '-':
+                    correctAnswer = num1 - num2;
+                    break;
+                case '*':
+                    correctAnswer = num1 * num2;
+                    break;
+            }
+
+            if (answer === correctAnswer) 
+            {
+                correctCount++;
+                alert("Correct, got " + correctCount + " point(s)")
+            }
+            else 
+            {
+                incorrectCount++;
+                alert("Incorrect");
+            }
+
+            playAgain = confirm("Do you want to play again?");
+
+        }
+
+        if (correctCount >= 4 ) 
+        {
+            alert("Final score : \nTotal times you have played : " + (correctCount + incorrectCount) +  "\nTotal correct points = " + correctCount + "\nTotal incorrect points = " + incorrectCount+ "\n----------You are the LEGEND----------");
+        }
+        else 
+        {
+            alert("Final score : \nTotal times you have played : " + (correctCount + incorrectCount) +  "\nTotal correct points = " + correctCount + "\nTotal incorrect points = " + incorrectCount );
+        }
+        
+
+        alert("Thanks for playing the game!");
+
+        document.write("<header><p>Read the game instructions and do not forget to come back to play again ...</p><a href='index.html'><input type='button' value='Go back!'> </a></header><br>");
+
+
+
+    </script>
+
+</body>
+
+</html>

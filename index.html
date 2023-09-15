@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./icon.jpg">
+    <title>Assignment 1 - Prince Chauhan</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400&display=swap');
+
+        * 
+        {
+            margin: 0;
+            padding: 0;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        body 
+        {
+            background: rgba(255, 220, 247, 0.748);
+        }
+
+        .parent::before 
+        {
+            content: '';
+            background-image: url('./pic1.jpg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+            position: absolute;
+            top: 46.5vh;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        h1,aside 
+        {
+            text-align: center;
+        }
+
+        li 
+        {
+            list-style: square;
+        }
+
+        input:hover 
+        {
+            cursor: pointer;
+            background-color: rgba(71, 75, 78, 0.871);
+            box-shadow: 0px 0px 16px 2px rgb(52, 5, 244);
+        }
+
+        span 
+        {
+            font-size: 18px;
+        }
+
+        input 
+        {
+            padding: 10px 72px 10px;
+            border-radius: 50px;
+            border: none;
+            color: white;
+            background-color: rgb(62, 73, 76);
+            box-shadow: 0px 0px 16px 2px rgb(0 242 255);
+            margin-top: -55vh;
+        }
+
+        header 
+        {
+            background-color: rgba(210, 205, 205, 0.901);
+            padding: 27px;
+            margin-top: 8px;
+        }
+
+        main 
+        {
+            padding: 25px;
+            margin-bottom: -20px;
+            margin-top: -9px;
+        }
+
+        p 
+        {
+            margin-top: 5px;
+        }
+
+        hr 
+        {
+            border-top: 4px solid #097969;
+            box-shadow: 0px 0px 5px 1px #054aff;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="parent">
+
+        <header>
+            <hr>
+            <h1> Assignment 1 - Prince Chauhan </h1>
+            <hr>
+        </header>
+
+        <main>
+            <h3> Game Instructions: </h3>
+            <p>
+            <ul>
+                <li>First enter any operator( (+), (-) , and (*) ) of your choice.</li>
+                <li>Then enter the correct answer for the given expression.</li>
+                <li>If you do right answer, then you will get 1 point for the correct answer and if wrong, then also you
+                    will get 1 incorrect point.</li>
+                <li>You can play as many times as you wish.</li>
+                <li>If you want to exit the game, just click on <strong>cancel</strong> option when it ask that <q>Do
+                        you want to
+                        play again!</q></li>
+                <li>At the end you will get a score board of your played gameplay. Best of luck! Have
+                    fun<span>&#128522</span></li>
+                <li>Click on <strong>START</strong> to play the game!</li>
+
+            </ul>
+            </p>
+        </main>
+
+        <aside>
+            <a href="./play.html">
+                <input type="button" value="START">
+            </a>
+        </aside>
+
+    </div>
+
+</body>
+
+</html>
